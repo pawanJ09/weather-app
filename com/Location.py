@@ -2,6 +2,14 @@ class City:
 
     def __init__(self):
         self.name = ''
-        self.state = ''
-        self.country = ''
-        self.day_time = ''
+        self.local_day_time = ''
+
+    def __str__(self):
+        city_str = ''
+        if self.name != '':
+            city_str += "\n" + self.name
+        if self.local_day_time != '':
+            city_str += "\n" + self.local_day_time
+        return city_str
+
+
