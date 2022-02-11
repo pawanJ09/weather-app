@@ -15,7 +15,7 @@ class Weather:
         if self.day_of_week != '':
             w += "\n" + self.day_of_week
         if self.high_temp != '':
-            w += " " + self.high_temp + self.metrics
+            w += " " + (self.high_temp + self.metrics).center(5)
         if self.low_temp != '':
-            w += " | " + self.low_temp + self.metrics + " " + self.description
+            w += " | " + (self.low_temp + self.metrics).center(5) + "  " + self.description
         return w

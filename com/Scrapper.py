@@ -87,8 +87,8 @@ def parse_weather_forecast(response, soup):
     weather_forecast = []
     if isinstance(response, requests.models.Response) and isinstance(soup, bs4.BeautifulSoup) \
             and response.status_code == 200:
-        for count, item in enumerate(soup.find_all('div', attrs={'class': 'wob_df'})):
-            if count > 0 and item is not None:
+        for item in soup.find_all('div', attrs={'class': 'wob_df'}):
+            if item is not None:
                 weather = Weather()
                 weather.metrics = find_weather_metrics(soup)
                 parsed_day = item.find('div', attrs={'class': 'Z1VzSb'})
