@@ -78,6 +78,12 @@ def find_weather_metrics(soup):
 
 
 def parse_weather_forecast(response, soup):
+    """
+    This method scrapes the forecast for 1 week from the webpage, parses it and returns the list
+    :param response: requests.models.Response object
+    :param soup: bs4.BeautifulSoup object
+    :return: com.Weather list
+    """
     weather_forecast = []
     if isinstance(response, requests.models.Response) and isinstance(soup, bs4.BeautifulSoup) \
             and response.status_code == 200:
