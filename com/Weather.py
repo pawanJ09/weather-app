@@ -6,3 +6,4 @@ class Weather:
         self.description = ''
         self.high_temp = 0
         self.low_temp = 0
+        self.day_of_week = ''

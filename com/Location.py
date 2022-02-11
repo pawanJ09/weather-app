@@ -4,3 +4,4 @@ class City:
         self.name = ''
         self.state = ''
         self.country = ''
+        self.day_time = ''
