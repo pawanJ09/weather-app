@@ -30,8 +30,8 @@ python main.py
 
 Enter your city: Chicago - runs the search and finds the first match for city named Chicago.
 
-Enter your city: Manchester Missouri - runs the search and looks for city in respective 
-state/country as provided in case there are multiple cities with the same name.
+Enter your city: Manchester Missouri - runs the search and looks for city in the state/country as 
+provided in case there are multiple cities with the same name.
 
 ## Output
 
