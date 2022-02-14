@@ -26,6 +26,36 @@ You can run the main.py program to get started. This file has the __main__ metho
 python main.py
 ```
 
+## Build and Run using Docker
+
+### Build image
+
+```shell
+docker build --tag weather-app:v1.0.0 .
+```
+
+### Run the container from built image
+
+Here we use -it for interactive terminal since we have to input the city from user.
+
+```shell
+docker run --name weather-app -p 1001:1001 -it weather-app:v1.0.0
+```
+
+### Start the container if re-executing the image
+
+```shell
+docker start weather-app -i
+```
+
+### Run using image from Docker hub
+
+```shell
+docker pull docker pull pawanj09/dh-weather-app
+
+docker run --name weather-app -p 1001:1001 -it pawanj09/dh-weather-app
+```
+
 ## Usage
 
 Enter your city: Chicago - runs the search and finds the first match for city named Chicago.
